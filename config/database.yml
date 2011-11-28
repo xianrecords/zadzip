@@ -1,0 +1,23 @@
+development:
+    adapter: mysql
+    database: zadzip_development
+    username: zadzipadmin
+    password: anthea
+    host: localhost
+    socket: /Applications/MAMP/tmp/mysql/mysql.sock
+
+test:
+    adapter: mysql
+    database: zadzip_test
+    username: zadzipadmin
+    password: anthea
+    host: localhost
+    socket: /Applications/MAMP/tmp/mysql/mysql.sock
+    
+production:
+    adapter: mysql
+    database: zadzip_production
+    username: zadzipadmin
+    password: anthea
+    host: localhost
+    socket: /Applications/MAMP/tmp/mysql/mysql.sock

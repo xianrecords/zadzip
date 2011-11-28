@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+  		<%= csrf_meta_tags %>
+  		<title><%= title %></title>
+		<%= render 'layouts/stylesheets' %>
+	</head>
+	
+	<body>
+		<%= render 'layouts/accessibility' %>
+		<% if logged_in? %>
+		<div id="view">
+				<%= render 'layouts/header' %>
+				<%= render 'layouts/mainmenu' %>
+			<% else %>
+			<div id="loginview">
+				<%= render 'layouts/login_header' %>
+			<% end %>
+		 	<!-- Main content -->
+		 	<div id="content">
+				<%= yield %>
+			</div><!-- // Content -->
+		  	<hr class="hidden noprint" />
+			<%= render 'layouts/footer' %>
+		</div><!-- // View -->
+	</body>
+</html>

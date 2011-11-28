@@ -1,0 +1,32 @@
+<div id="contentBlock">
+	
+	<div class="box">
+		<!-- the slider content holder -->
+		<div class="slider-wrapper theme-pascal">
+			<div class="ribbon"></div>
+			<div id = "slider" class=""nivoSlider"">
+		        <!-- the elements inside the slider, have as many as you want -->
+		        <img src="assets/frontpage/img1.jpg" alt="" />
+				<img src="assets/frontpage/img2.jpg" alt="" />
+				<img src="assets/frontpage/img3.jpg" alt="" />
+			</div>
+			<div id="htmlcaption" class="nivo-html-caption">
+		    	<strong>This is an example of a caption.
+			</div>
+		</div><!-- slider -->		
+	</div>
+
+	<div class="signup">
+		<h2 class="title"><b>New to zAdZip?</b> Join Today!</h2>
+		<div class="in">
+				<%= form_tag signup_path do %>
+					<span class="left">
+	    			<%= text_field_tag :email, nil, :title => "Email" , :class => "signupbox"%><br />
+	    			<span><%= password_field_tag :password, nil, :title => "Password", :class => "signupbox" %></span>
+					<span><%= submit_tag 'Sign Up', :class => "submit" %></span><br />
+					<%= password_field_tag :confirmation_password, nil, :title => "Confirm Password", :class => "signupbox" %>
+				<% end %>
+		</div> 
+  	</div>
+	
+</div>

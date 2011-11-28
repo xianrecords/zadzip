@@ -1,0 +1,36 @@
+<!-- Main menu and submenu -->
+<div id="menu">
+    <ul id="mainMenu">
+	
+		<% if @title == "Home" %>
+      		<li><strong>Home</strong></li>
+		<% else %>
+			<li><%= link_to "Home", root_path %></li>
+		<% end %>
+		
+		<% if @title == "Advertise" %>
+			<li><strong>Advertise</strong></li>
+		<% else %>
+      		<li><%= link_to "Advertise", advertise_path %></li>
+		<% end %>
+
+		<% if @title == "Display" %>
+			<li><strong>Display</strong></li>
+		<% else %>
+      		<li><%= link_to "Display", display_path %></li>
+		<% end %>
+		
+		<% if @title == "Store" %>
+			<li><strong>Store</strong></li>
+		<% else %>
+      		<li><%= link_to "Store", store_path %></li>
+		<% end %>
+
+    </ul>
+    <ul id="subMenu">
+	  <li><%= current_username %></li>
+      <li><%= link_to "Logout", logout_path %></li>
+    </ul>
+</div><!-- // Menu -->
+
+<hr class="hidden noprint" />

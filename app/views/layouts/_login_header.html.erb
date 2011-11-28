@@ -1,0 +1,19 @@
+<div id="loginhead">
+	<h1 id="logotype">zAdZip</h1>
+	<div id="loginForm">
+	<%= form_tag session_path do %>
+    		<%= text_field_tag :email, nil, :title => "Email" , :class => "loginbox"%>
+    		<%= password_field_tag :password, nil, :title => "Password", :class => "loginbox" %>
+			<%= submit_tag 'Login', :class => "submit" %> <br />
+			<%= check_box_tag :remember %>
+		    <span class="t_remember">Remember me</span> <%= link_to "Forgot Password ?", root_path %>
+	<% end %>
+	</div>
+	<div class="error_login">
+		<%= content_tag :p, notice, :class => 'notice' if notice.present? %>
+		<%= content_tag :p, alert,  :class => 'alert'  if alert.present?  %>
+	</div>
+	
+</div><!-- // Header -->
+
+<hr class="hidden" />
