@@ -6,6 +6,11 @@ gem 'rails', '3.1.1'
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
 gem 'mysql'
+group :production do
+  # gems specifically for Heroku go here
+  gem 'therubyracer-heroku', '0.8.1.pre3'
+  gem "pg"
+end
 
 
 # Gems used only for assets and not required

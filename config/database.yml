@@ -15,9 +15,7 @@ test:
     socket: /Applications/MAMP/tmp/mysql/mysql.sock
     
 production:
-    adapter: mysql
-    database: zadzip_production
-    username: zadzipadmin
+    adapter: postgresql
+    database: postgres
+    username: postgres
     password: anthea
-    host: localhost
-    socket: /Applications/MAMP/tmp/mysql/mysql.sock
