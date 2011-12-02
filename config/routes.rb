@@ -2,16 +2,16 @@ Zadzip::Application.routes.draw do
    match 'advertise', :to => 'pages#advertise'
    match 'display', :to => 'pages#display'
    match 'store', :to => 'pages#store'
-
+   match 'home', :to => 'pages#home'
 
    root :to => 'pages#home'
    
    resources :users
    resource  :session
-   
-   match '/signup', :to => 'users#new'
-   match '/login'  => "sessions#new", :as => "login"
-   match '/logout' => "sessions#destroy", :as => "logout"
+ 
+   match '/signup'  => "users#new", :as => "signup"  
+   match '/login'   => "sessions#new", :as => "login"
+   match '/logout'  => "sessions#destroy", :as => "logout"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

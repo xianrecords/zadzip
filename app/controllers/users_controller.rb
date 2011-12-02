@@ -7,7 +7,9 @@ class UsersController < ApplicationController
   def create
     @user = User.new(params[:user])
     if @user.save
-      redirect_to pages#home
+      user = User.authenticate(@user.email, @user.password)
+      session[:user_id] = user.id
+      redirect_to root_path, :notice => "New User Created succesfully"
     else
       render :action => 'new'
     end
@@ -20,7 +22,7 @@ class UsersController < ApplicationController
   def update
     @user = User.find(params[:id])
     if @user.update_attributes(params[:users])
-      redirect_to pages#home
+      redirect_to root_path
     else
       render :action => 'edit'
     end

@@ -84,6 +84,7 @@ fieldset    { border: 0 !important; }
 
 .error_login .alert {float: right; margin-top: 70px; position: relative; width: 380px; height: 10px;  text-align: right; padding: 10px 1px; font-size: 1.1em; color: #FF0000 }
 .error_login .notice {float: right; margin-top: 70px; position: relative; width: 380px; height: 10px;  text-align: right; padding: 10px 1px; font-size: 1.1em; }
+#errorExplanation  { margin-top: 20px; margin-left: 240px; width: 460px;  text-align: center; padding: 10px 1px; font-size: 1.1em; color: #FF0000 }
 
 /* -- Layout -- */
 #view         { width: 954px; margin: 0 auto; padding: 0 11px; background: url('../assets/bg-shadow.png') 0 71px no-repeat; }
@@ -165,7 +166,7 @@ fieldset    { border: 0 !important; }
   #contentBlock             { width: 610px; float: left; padding: 25px 0; }
   #contentBlock .subheader  { margin-bottom: 20px !important; }
   #contentBlock .box      	{ margin-left: 100px; height: 300px; width: 680px; }
-  #contentBlock .signup .in             { margin-left: 232px; margin-top:20px; padding: 30px 15px; width: 400px; height: 130px; background: #3b5aa7 url('../assets/bg-signup.gif') no-repeat; }
+  #contentBlock .signup .in             { margin-left: 232px; margin-top:20px; padding: 30px 15px; width: 440px; height: 130px; background: #3b5aa7 url('../assets/bg-signup.gif') no-repeat; }
   #contentBlock .signup .in .submit     { position: relative; margin-top:10px;  left: 50px; width: 87px !important; height: 29px; background: #3b5aa7 url('../assets/bg-search-submit.gif') no-repeat; }
   #contentBlock .signup .title          { margin-left: 300px; margin-top:25px; font-size: 1.7em; color: #fbf8b4; font-weight:normal; }
 

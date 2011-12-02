@@ -1,29 +1,27 @@
-<%= form_for(@user) do |f| %>
+<%= form_for (@user) do |f| %>
+	
+	<div class="signup">
+		<h2 class="title"><b>New to zAdZip?</b> Join Today!</h2>
+		<div class="in">
+			<span class="left">
+    		<%= f.text_field :email, :title => "Email" , :class => "signupbox"%><br />
+    		<span><%= f.password_field :password, :title => "Password", :class => "signupbox" %></span>
+			<span><%= f.submit 'Sign Up', :class => "submit" %></span><br />
+			<%= f.password_field :password_confirmation, :title => "Confirm Password", :class => "signupbox" %>
+		</div> 
+	</div>
+	
 	<% if @user.errors.any? %>
-		<div id="errorExplanation">
-			<h2><%= pluralize(@user.error.count,"error") %>prohibited this user from being saved:</h2>
-			<ul>
-			<% @user.errors.full_messages.each do |msg| %>
-				<li><%= msg %></li>
-			<% end %>
-			</ul>
-		</div>
+			<div id="errorExplanation">
+				<h5><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h5>
+				<ul>
+					<% @user.errors.full_messages.each do |msg| %>
+					<li><%= msg %></li>
+					<% end %>
+				</ul>
+			</div>
 	<% end %>
 	
-	<div class="field">
-		<%= f.label :email %><br />
-		<%= f.text_field :email %>
-	</div>
-	<div class="field">
-		<%= f.label :password %><br />
-		<%= f.text_field :password %>
-	</div>
-	<div class="field">
-		<%= f.label :password_confirmation %><br />
-		<%= f.text_field :password_confirmation %>
-	</div>
-	<div class="actions">
-		<%= f.submit %>
-	</div>
 	
 <% end %>
+

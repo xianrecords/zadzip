@@ -16,17 +16,21 @@
 		</div><!-- slider -->		
 	</div>
 
-	<div class="signup">
-		<h2 class="title"><b>New to zAdZip?</b> Join Today!</h2>
-		<div class="in">
-				<%= form_tag signup_path do %>
-					<span class="left">
-	    			<%= text_field_tag :email, nil, :title => "Email" , :class => "signupbox"%><br />
-	    			<span><%= password_field_tag :password, nil, :title => "Password", :class => "signupbox" %></span>
-					<span><%= submit_tag 'Sign Up', :class => "submit" %></span><br />
-					<%= password_field_tag :confirmation_password, nil, :title => "Confirm Password", :class => "signupbox" %>
-				<% end %>
-		</div> 
-  	</div>
+
+	<%= form_for @user, :url => { :controller => 'users', :action => 'create' } do |f| %>
+		<div class="signup">
+			<h2 class="title"><b>New to zAdZip?</b> Join Today!</h2>
+			<div class="in">
+				<span class="left">
+	    		<%= f.text_field :email, :title => "Email" , :class => "signupbox"%><br />
+	    		<span><%= f.password_field :password, :title => "Password", :class => "signupbox" %></span>
+				<span><%= f.submit 'Sign Up', :class => "submit" %></span><br />
+				<%= f.password_field :password_confirmation, :title => "Confirm Password", :class => "signupbox" %>
+			</div> 
+		</div>
+
+	<% end %>
+
+
 	
 </div>
